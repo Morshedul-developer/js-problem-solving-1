@@ -16,5 +16,7 @@
 //* random
 // console.log(Math.random());
 // console.log(Math.random()*10);
-const randomNum = Math.round(Math.random()*10)
-console.log(randomNum);
+// const randomNum = Math.round(Math.random()*10)
+// console.log(randomNum);
+//* pow
+console.log(Math.pow(2, 3));
