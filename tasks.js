@@ -78,3 +78,44 @@
 // const str = "Nth cnd fr th tst.";
 // const result = vowelCounter(str);
 // console.log(result);
+
+
+//* Task-4:
+//? Write a function to find the longest word in a given string.
+
+// sample-input: I am learning Programming to become a programmer
+
+// sample-output: Programming
+
+// solution
+
+//! I did this one
+// function longestWord(str) {
+//     const words = str.split(' ');
+//     const arr = [];
+//     for(const word of words) {
+//         arr.push(word.length);
+//     }
+//     const maxLen = Math.max(...arr);
+//     for(const word of words) {
+//         if(maxLen === word.length){
+//             return word;
+//         }
+//     }
+// }
+
+//? another way
+function longestWord(str) {
+    let longest = "";
+
+    for(const word of str.split(" ")){
+        if(word.length > longest.length){
+            longest = word;
+        }
+    }
+    return longest;
+}
+
+const str = "I am learning Programming to become a programmer";
+const result = longestWord(str);
+console.log(result);
