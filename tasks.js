@@ -45,7 +45,6 @@
 // const result = find(numbers,988);
 // console.log(result);
 
-
 //* Task-3:
 //? Write a function to count the number of vowels in a string.
 
@@ -79,7 +78,6 @@
 // const result = vowelCounter(str);
 // console.log(result);
 
-
 //* Task-4:
 //? Write a function to find the longest word in a given string.
 
@@ -105,17 +103,45 @@
 // }
 
 //? another way
-function longestWord(str) {
-    let longest = "";
+// function longestWord(str) {
+//     let longest = "";
 
-    for(const word of str.split(" ")){
-        if(word.length > longest.length){
-            longest = word;
-        }
-    }
-    return longest;
+//     for(const word of str.split(" ")){
+//         if(word.length > longest.length){
+//             longest = word;
+//         }
+//     }
+//     return longest;
+// }
+
+// const str = "I am learning Programming to become a programmer";
+// const result = longestWord(str);
+// console.log(result);
+
+//* Task-5:
+//? Generate a random number between 10 to 20.
+
+// solution
+
+// function randomNum() {
+//     for(let i=11; i<=30; i++) {
+//         const randomNumber = Math.round(i * Math.random());
+//         if (randomNumber >= 10 && randomNumber <= 20) {
+//             console.log(randomNumber);
+//             break;
+//         }
+//     }
+// }
+
+// randomNum();
+
+//! 10 to 20 (inclusive) random number getting formula: Math.floor(Math.random() * (max - min + 1) + min)
+//! 10 to 20 (exclusive) random number getting formula: Math.floor(Math.random() * (max - min - 1) + min + 1)
+
+function randNumb() {
+  const randomNumber = Math.floor(Math.random() * (20 - 10 + 1) + 10);
+  return randomNumber;
 }
 
-const str = "I am learning Programming to become a programmer";
-const result = longestWord(str);
-console.log(result);
+const randomNumber = randNumb();
+console.log(randomNumber);
